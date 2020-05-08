@@ -13,6 +13,13 @@ dependencies{
     compile(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
 
+    // JUnit
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.0")
+
+    //mock
+    testCompile(group="io.mockk", name= "mockk", version= "1.9.3")
+    testCompile(group= "org.mockftpserver", name= "MockFtpServer", version= "2.7.1")
+
 }
 
 repositories {
