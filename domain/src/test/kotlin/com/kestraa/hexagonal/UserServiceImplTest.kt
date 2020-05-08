@@ -2,17 +2,17 @@ package com.kestraa.hexagonal
 
 import com.kestraa.hexagonal.model.User
 import com.kestraa.hexagonal.port.UserRepository
-import com.kestraa.hexagonal.service.UserService
+import com.kestraa.hexagonal.service.UserServiceImpl
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class UserServiceTest {
+class UserServiceImplTest {
 
     private val userRepository = mockk<UserRepository>()
-    private val userService = UserService(userRepository)
+    private val userService = UserServiceImpl(userRepository)
 
     @Test
     fun `Test Get Users`() {

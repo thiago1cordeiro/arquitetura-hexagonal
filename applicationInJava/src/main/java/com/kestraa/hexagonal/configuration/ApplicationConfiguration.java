@@ -1,9 +1,9 @@
 package com.kestraa.hexagonal.configuration;
 
-import com.kestraa.hexagonal.port.UserPort;
+import com.kestraa.hexagonal.port.UserService;
 import com.kestraa.hexagonal.port.UserRepository;
 import com.kestraa.hexagonal.repository.UserRepositoryImpl;
-import com.kestraa.hexagonal.service.UserService;
+import com.kestraa.hexagonal.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationConfiguration {
 
     @Bean
-    public UserPort getUserService(UserRepository userRepository ) {
-        return new UserService(userRepository);
+    public UserService getUserService(UserRepository userRepository ) {
+        return new UserServiceImpl(userRepository);
     }
 
     @Bean

@@ -1,15 +1,15 @@
 package com.kestraa.hexagonal.controller
 
 import com.kestraa.hexagonal.model.User
-import com.kestraa.hexagonal.port.UserPort
+import com.kestraa.hexagonal.port.UserService
 
 
-class UserController(private val userPort: UserPort) {
+class UserController(private val userService: UserService) {
     fun getUsers(): List<User> {
-        return userPort.getUser()
+        return userService.getUser()
     }
 
     fun createUser(user: User){
-        userPort.createUser(user)
+        userService.createUser(user)
     }
 }
