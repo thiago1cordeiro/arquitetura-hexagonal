@@ -7,5 +7,4 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder
 @JsonPropertyOrder(
     "data"
 )
-
 data class UserAdapter(val id: Long, val name: String)

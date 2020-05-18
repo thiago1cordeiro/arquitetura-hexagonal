@@ -10,6 +10,5 @@ class ApplicationFactory {
         private val userRepository = UserRepositoryImpl()
         private val userService = UserServiceImpl(userRepository)
         val userController = UserController(userService)
-
     }
 }

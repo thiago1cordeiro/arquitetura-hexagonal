@@ -25,6 +25,11 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+
+    // JSON
+    compile(group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version = "2.10.1")
+    compile(group = "com.fasterxml.jackson.core", name = "jackson-databind", version = "2.10.2")
+    compile(group = "com.google.code.gson", name = "gson", version = "2.8.6")
 }
 
 tasks.withType<Test> {

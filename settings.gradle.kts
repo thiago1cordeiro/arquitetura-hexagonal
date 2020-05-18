@@ -1,3 +1,3 @@
 
-include("applicationInJava", "domain", "applicationInKotlin")
+include( "domain", "applicationJavalin", "applicationSpringboot")
 include("teste")
